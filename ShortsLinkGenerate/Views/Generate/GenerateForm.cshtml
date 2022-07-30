@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "ShortUrl Generate";
+}
+
+<div class="card">
+    <div class="header"></div>
+    <div class="card-body">
+        <div class="form-group">
+            <div class="input-group mb-3">
+                <input id="fullURL" type="text" class="form-control" placeholder="Full URL" aria-label="Full URL">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" onclick="Genshorten();">Shorten</button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <h5>Short Link:</h5><span id="shortLink"></span>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/js/generate.js"></script>
+} 
